@@ -120,7 +120,9 @@ endfunction
 "---------------
 
 " :set rtp+=<SHARE_DIR>/ocamlmerlin/vim
-:set rtp+=~/.opam/4.01.0/share/ocamlmerlin/vim
+" :set rtp+=~/.opam/4.02.3/share/ocamlmerlin/vim
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
 let g:syntastic_ocaml_checkers = ['merlin']
 
 
@@ -155,3 +157,4 @@ au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 " command! Biggie :Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
 command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 
+nmap \ <Plug>FireplaceK

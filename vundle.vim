@@ -28,8 +28,11 @@ Plugin 'jgdavey/vim-blockle'
 " Plugin 'mileszs/ack.vim'
 Plugin 'powerman/vim-plugin-ruscmd'
 
+Plugin 'kien/rainbow_parentheses.vim'
+
 " Languages - Clojure
-Plugin 'amdt/vim-niji'
+Plugin 'tagbar'
+Plugin 'losingkeys/vim-niji'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'guns/vim-slamhound'
@@ -46,6 +49,7 @@ Plugin 'tpope/vim-afterimage' " edits images
 Plugin 'slim-template/vim-slim'
 
 " Languages - OCaml
+Plugin 'rgrinberg/vim-ocaml'
 Plugin 'the-lambda-church/merlin'
 Plugin 'def-lkb/vimbufsync'
 Plugin 'yssl/qfenter'
