@@ -15,6 +15,7 @@ Plugin 'gmarik/vundle'
 " Plugins
 " -------
 " Mine
+Plugin 'luochen1990/rainbow'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'jpalardy/vim-slime'
@@ -28,15 +29,13 @@ Plugin 'jgdavey/vim-blockle'
 " Plugin 'mileszs/ack.vim'
 Plugin 'powerman/vim-plugin-ruscmd'
 
-Plugin 'kien/rainbow_parentheses.vim'
-
 " Languages - Clojure
 Plugin 'tagbar'
-Plugin 'losingkeys/vim-niji'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'guns/vim-slamhound'
-Plugin 'tpope/vim-fireplace'
+" Plugin 'tpope/vim-fireplace'
+Plugin 'christoph-frick/vim-fireplace'
 Plugin 'honza/vim-clojure-conceal'
 " Plugin 'dgrnbrg/vim-redl'
 Plugin 'guns/vim-sexp'

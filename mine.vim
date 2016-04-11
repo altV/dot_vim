@@ -131,16 +131,6 @@ let g:syntastic_ocaml_checkers = ['merlin']
 " Clojure
 "---------------
 
-" let g:niji_light_colours = [['red', 'red1'],
-"                            \ ['yellow', 'orange1'],
-"                            \ ['green', 'yellow1'],
-"                            \ ['cyan', 'greenyellow'],
-"                            \ ['magenta', 'green1'],
-"                            \ ['red', 'springgreen1'],
-"                            \ ['yellow', 'cyan1'],
-"                            \ ['green', 'slateblue1'],
-"                            \ ['cyan', 'magenta1'],
-
 let g:niji_light_colours = [['black', 'black'],
                           \ ['red', 'red3'],
                           \ ['darkyellow', 'orangered3'],
@@ -156,5 +146,48 @@ au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 " command! Piggie :Piggieback (cemerick.austin/exec-env)
 " command! Biggie :Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
 command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
+command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 
 nmap \ <Plug>FireplaceK
+
+
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+      \'separately' : {
+\  'clojure': { 'ctermfgs':
+\                  ['black',
+\                  'red',
+\                  'darkyellow',
+\                  'darkgreen',
+\                  'blue',
+\                  'darkmagenta',
+\                  'red',
+\                  'darkyellow',
+\                  'darkgreen',
+\                  'blue']
+\  }
+\  }
+\}
+
+
+" \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+" \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+" \   'operators': '_,_',
+" \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+" \   'separately': {
+" \       '*': {},
+" \       'tex': {
+" \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+" \       },
+" \       'lisp': {
+" \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+" \       },
+" \       'vim': {
+" \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+" \       },
+" \       'html': {
+" \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+" \       },
+" \       'css': 0,
+" \   }
+" \}
