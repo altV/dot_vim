@@ -191,3 +191,5 @@ let g:rainbow_conf = {
 " \       'css': 0,
 " \   }
 " \}
+
+nnoremap ,how :r!howdoi -n3<space>

@@ -15,6 +15,7 @@ Plugin 'gmarik/vundle'
 " Plugins
 " -------
 " Mine
+Plugin 'laurentgoudet/vim-howdoi'
 Plugin 'luochen1990/rainbow'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
