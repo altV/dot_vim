@@ -193,3 +193,15 @@ let g:rainbow_conf = {
 " \}
 
 nnoremap ,how :r!howdoi -n3<space>
+
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('clj', 'cyan', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('cljc', 'magenta', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('cljx', 'magenta', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('cljs', 'green', 'none', 'green', '#151515')
