@@ -148,12 +148,17 @@ au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 
-nmap \ <Plug>FireplaceK
+nmap \ cpp
+nmap \\ <Plug>FireplaceK
+nmap ]d <Plug>FireplaceK
+
+let g:ycm_semantic_triggers = { 'clojure': ['(', '.', '/'] }
 
 
+" \   'ctermfgs': [ 'black', 'red', 'darkyellow', 'darkgreen', 'blue', 'darkmagenta', 'red', 'darkyellow', 'darkgreen', 'blue'],
 let g:rainbow_active = 1
 let g:rainbow_conf = {
-      \'separately' : {
+\   'separately' : {
 \  'clojure': { 'ctermfgs':
 \                  ['black',
 \                  'red',
@@ -165,7 +170,8 @@ let g:rainbow_conf = {
 \                  'darkyellow',
 \                  'darkgreen',
 \                  'blue']
-\  }
+\  },
+\ 'ruby': {'ctermfgs': ['white', 'lightblue', 'red', 'darkyellow', 'darkgreen', 'blue', 'darkmagenta']}
 \  }
 \}
 
