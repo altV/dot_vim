@@ -29,6 +29,12 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'jgdavey/vim-blockle'
 " Plugin 'mileszs/ack.vim'
 Plugin 'powerman/vim-plugin-ruscmd'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Languages - Haskell
+Plugin 'eagletmt/ghcmod-vim.git'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'Shougo/vimproc.vim'
 
 " Languages - Clojure
 Plugin 'tagbar'

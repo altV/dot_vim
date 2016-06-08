@@ -211,3 +211,25 @@ call NERDTreeHighlightFile('clj', 'cyan', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('cljc', 'magenta', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('cljx', 'magenta', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('cljs', 'green', 'none', 'green', '#151515')
+
+
+
+
+
+
+
+
+" Haskell
+" conflicts with something beginning on t
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+map <silent> ti :GhcModInfo<CR>
+
+" map <silent> \w :GhcModTypeInsert<CR>
+" map <silent> \s :GhcModSplitFunCase<CR>
+" map <silent> \q :GhcModType<CR>
+" map <silent> \e :GhcModTypeClear<CR>
+" map <silent> \i :GhcModInfo<CR>
+"

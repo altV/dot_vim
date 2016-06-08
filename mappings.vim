@@ -14,8 +14,8 @@ let maplocalleader = "\\"
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
-nnoremap : ;
-vnoremap : ;
+" nnoremap : ; " hell to use in map to command, yeah.
+" vnoremap : ; " hell to use in map to command, yeah.
 
 " Yank entire buffer with gy
 nnoremap gy :%y+<cr>
