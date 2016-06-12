@@ -227,9 +227,5 @@ map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
 map <silent> ti :GhcModInfo<CR>
 
-" map <silent> \w :GhcModTypeInsert<CR>
-" map <silent> \s :GhcModSplitFunCase<CR>
-" map <silent> \q :GhcModType<CR>
-" map <silent> \e :GhcModTypeClear<CR>
-" map <silent> \i :GhcModInfo<CR>
-"
+let g:haskellmode_completion_ghc = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
