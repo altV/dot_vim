@@ -148,9 +148,12 @@ au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 
-nmap \ cpp
-nmap \\ <Plug>FireplaceK
-nmap ]d <Plug>FireplaceK
+nmap \ <Plug>FireplaceK
+" nmap \\ cpp
+" unmap ]d
+" nmap [s <Plug>FireplaceK
+nmap [s ;Eval<CR>
+nmap ]s cpp
 
 let g:ycm_semantic_triggers = { 'clojure': ['(', '.', '/'] }
 
