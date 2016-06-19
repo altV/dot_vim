@@ -35,6 +35,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'eagletmt/ghcmod-vim.git'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'Twinside/vim-hoogle'
+Plugin 'https://github.com/dan-t/vim-hsimport'
+" Plugin 'https://github.com/pbrisbin/html-template-syntax' # hamlet, lucius
+Plugin 'https://github.com/bitc/lushtags'
+Plugin 'https://github.com/Twinside/vim-haskellFold'
+Plugin 'enomsg/vim-haskellConcealPlus'
+Plugin 'twinside/vim-haskellconceal'
 
 " Languages - Clojure
 Plugin 'tagbar'
