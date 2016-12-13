@@ -145,13 +145,15 @@ let g:niji_light_colours = [['black', 'black'],
 au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 " command! Piggie :Piggieback (cemerick.austin/exec-env)
 " command! Biggie :Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
-command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
+" command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
+let g:clojure_align_multiline_strings = 1
 
 nmap \ cpp
-nmap \\ <Plug>FireplaceK
+" nmap \\ <Plug>FireplaceK
 nmap ]d <Plug>FireplaceK
-
+nmap [s ;Eval<CR>
+nmap ]s cpp
 let g:ycm_semantic_triggers = { 'clojure': ['(', '.', '/'] }
 
 
@@ -221,11 +223,11 @@ call NERDTreeHighlightFile('cljs', 'green', 'none', 'green', '#151515')
 
 " Haskell
 " conflicts with something beginning on t
-map <silent> tw :GhcModTypeInsert<CR>
-map <silent> ts :GhcModSplitFunCase<CR>
-map <silent> tq :GhcModType<CR>
-map <silent> te :GhcModTypeClear<CR>
-map <silent> ti :GhcModInfo<CR>
+" map <silent> tw :GhcModTypeInsert<CR>
+" map <silent> ts :GhcModSplitFunCase<CR>
+" map <silent> tq :GhcModType<CR>
+" map <silent> te :GhcModTypeClear<CR>
+" map <silent> ti :GhcModInfo<CR>
 
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
