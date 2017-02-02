@@ -145,7 +145,7 @@ let g:niji_light_colours = [['black', 'black'],
 au BufRead,BufNewFile *.cljx       setlocal filetype=clojure
 " command! Piggie :Piggieback (cemerick.austin/exec-env)
 " command! Biggie :Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
-command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
+" command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 
 nmap \ <Plug>FireplaceK
@@ -169,6 +169,13 @@ let g:rainbow_conf = {
 \                  'darkgreen',
 \                  'blue',
 \                  'darkmagenta',
+\                  'darkcyan',
+\                  'red',
+\                  'darkyellow',
+\                  'darkgreen',
+\                  'blue',
+\                  'darkmagenta',
+\                  'darkcyan',
 \                  'red',
 \                  'darkyellow',
 \                  'darkgreen',
@@ -177,6 +184,11 @@ let g:rainbow_conf = {
 \ 'ruby': {'ctermfgs': ['white', 'lightblue', 'red', 'darkyellow', 'darkgreen', 'blue', 'darkmagenta']}
 \  }
 \}
+
+" autocmd VimEnter * RainbowToggleOn
+" autocmd Syntax clojure RainbowToggleOn
+
+let g:clojure_align_multiline_strings = 1
 
 
 " \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
