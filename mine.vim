@@ -185,8 +185,9 @@ let g:rainbow_conf = {
 \  }
 \}
 
-" autocmd VimEnter * RainbowToggleOn
-" autocmd Syntax clojure RainbowToggleOn
+autocmd BufEnter *.clj  RainbowToggleOn
+autocmd BufEnter *.cljs RainbowToggleOn
+autocmd BufEnter *.cljc RainbowToggleOn
 
 let g:clojure_align_multiline_strings = 1
 
@@ -227,6 +228,11 @@ call NERDTreeHighlightFile('cljc', 'magenta', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('cljx', 'magenta', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('cljs', 'green', 'none', 'green', '#151515')
 
+
+" Autofold requires in Clojure
+au BufRead *.clj  normal mxggzfap'x
+au BufRead *.cljc normal mxggzfap'x
+au BufRead *.cljs normal mxggzfap'x
 
 
 

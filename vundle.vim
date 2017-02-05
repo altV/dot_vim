@@ -44,6 +44,7 @@ Plugin 'enomsg/vim-haskellConcealPlus'
 Plugin 'twinside/vim-haskellconceal'
 
 " Languages - Clojure
+" Plugin 'gberenfield/cljfold.vim'
 Plugin 'tagbar'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
