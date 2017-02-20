@@ -252,3 +252,9 @@ let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 let hscoptions="*EfchCIT"
+
+
+
+" NERDTree and Startify
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:startify_custom_header = []
